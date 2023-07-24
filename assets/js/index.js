@@ -12,13 +12,14 @@ $("#update_user").submit(function(event){
 
 
     var request = {
-        "url" : `http://localhost:3000/api/users/${data.id}`,
+        "url" : `http://localhost:3000/api/users/${data._id}`,
         "method" : "PUT",
         "data" : data
     }
 
     $.ajax(request).done(function(response){
-        alert("Data Updated Successfully!");
+        // alert("Data Updated Successfully!");
+        window.location.href="/"
     })
 
 })
