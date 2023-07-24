@@ -18,7 +18,8 @@ exports.create=(req,res)=>{
     //save on mongoDb
     user.save(user)
         .then((data)=>{
-            res.send(data)
+            // res.send(data)
+            res.redirect("/")
         })
         .catch((err)=>{
             res.status(500).send({message:err.message || "something went wrong,couldn't create user"})
